@@ -1,4 +1,5 @@
 from random import randint
+from typing import Optional
 
 from graphic_arts.start_game_banner import run_screensaver
 
@@ -53,7 +54,8 @@ def start_training(char_name: str, char_class: str) -> str:
           'defence — чтобы блокировать атаку противника или '
           'special — чтобы использовать свою суперсилу.')
     print('Если не хочешь тренироваться, введи команду skip.')
-    cmd: None = None
+    cmd: Optional[str]
+    cmd = None 
     while cmd != 'skip':
         cmd = input('Введи команду: ')
         if cmd == 'attack':
